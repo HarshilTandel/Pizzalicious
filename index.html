@@ -1,0 +1,254 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/logo.png" class="logo">
+    <nav>
+   
+        <ul class="navigation">
+            <!-- <button id="theme-toggle" onclick="toggleTheme()">
+                <img src="/home/viru/Downloads/night-mode (1).png" alt="Light Mode" id="light-mode-img">
+                <img src="/home/viru/Downloads/night-mode.png" alt="Dark Mode" id="dark-mode-img" style="display: none;">
+            </button> -->
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="home-section">
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="content">
+        <h1 class="terminal-text">Welcome to our Pizzalicious</h1>
+        <p>Order delicious pizzas online and enjoy convenient delivery right to your doorstep.</p>
+        <a href="#" class="btn">Order Now</a>
+    </div>
+</section>
+<section class="menu-section">
+    <h2>Menu</h2>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/Veggie Pizza.webp" alt="Pizza 1">
+                <h3>Veggie Pizza</h3>
+                <p>Fresh vegetable toppings.</p>
+                <p class="price">100.99 RS</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="slide">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/Buffalo Pizza.webp" alt="Pizza 2">
+                <h3>Buffalo Pizza</h3>
+                <p class="descrption">Spicy buffalo sauce.</p>
+                <p class="price">560.99 RS</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="slide">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/Pepperoni Pizza.jpeg" alt="Pizza 3">
+                <h3>Pepperoni Pizza</h3>
+                <p class="descrption">Classic pepperoni slices.</p>
+                <p class="price">240.99 RS</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="slide">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/Margherita Pizza.jpeg" alt="Pizza 4">
+                <h3>Margherita Pizza</h3>
+                <p class="descrption">Mozzarella, basil, tomato.</p>
+                <p class="price">716.99 RS</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="slide">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/Meat Pizza.webp" alt="Pizza 5">
+                <h3>Meat Pizza</h3>
+                <p class="descrption"> Assorted meat toppings.</p>
+                <p class="price">190.99 RS</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="slide">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/BBQ Chicken Pizza.webp" alt="Pizza 6">
+                <h3>BBQ Chicken Pizza</h3>
+                <p class="descrption">BBQ sauce and chicken.</p>
+                <p class="price">225.0 RS</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="slide">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/Hawaiian Pizza.webp" alt="Pizza 7">
+                <h3>Hawaiian Pizza</h3>
+                <p class="descrption"> Ham and pineapple.</p>
+                <p class="price">450.00 RS</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="slide">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/Supreme Pizza.webp" alt="Pizza 8">
+                <h3>Supreme Pizza</h3>
+                <p class="descrption"> Multiple pizza toppings.</p>
+                <p class="price">199.99 RS</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="slide">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/Chicago Style Pizza.jpg" alt="Pizza 9">
+                <h3> Chicago Style Pizza</h3>
+                <p class="descrption">Thin crust, simple toppings.</p>
+                <p class="price">750.RS</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="slide">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/Neapolitan Pizza.jpg" alt="Pizza 10">
+                <h3> Neapolitan Pizza</h3>
+                <p class="descrption">Deep-dish classic.</p>
+                <p class="price">800.RS</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <!-- Add more slides for other pizza items -->
+        </div>
+    </div>
+</section>
+<section class="cart-section" id="cart-section" style="display: none;">
+    <h2>Cart</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </tbody>
+    </table>
+    <p id="total-price">Total: $0</p>
+</section>
+<div class="payment-section">
+    <h2>Payment</h2>
+    <div class="payment-options">
+        <div class="payment-option">
+            <input type="radio" id="credit-card" name="payment" value="credit-card">
+            <label for="credit-card">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/cc.png" alt="Credit Card">
+            </label>
+        </div>
+        <div class="payment-option">
+            <input type="radio" id="debit-card" name="payment" value="debit-card">
+            <label for="debit-card">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/dc.jpeg" alt="Debit Card">
+            </label>
+        </div>
+        <div class="payment-option">
+            <input type="radio" id="gpay" name="payment" value="gpay">
+            <label for="gpay">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/gpay.png" alt="GPay">
+            </label>
+        </div> 
+        <div class="payment-option">
+            <input type="radio" id="phonepe" name="payment" value="phonepe">
+            <label for="phonepe">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/pe.png" alt="PhonePe">
+            </label>
+        </div>
+    </div>
+    <button id="confirm-payment">Confirm Payment</button>
+</div>
+<div class="delivery-section">
+    <h2>Delivery Details</h2>
+    <form id="delivery-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required><br>
+
+        <label for="zipcode">Zip Code:</label>
+        <input type="text" id="zipcode" name="zipcode" required><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</div> 
+<section class="info-section">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Welcome to Pizzalicious, where we have been serving delicious pizzas made with the finest ingredients for over 10 years. Our mission is to provide our customers with the best pizza experience, from the first bite to the last.</p>
+        <p>At Pizzalicious, we believe in using fresh, locally sourced ingredients to create mouthwatering pizzas that satisfy your cravings. Each pizza is crafted with care and precision by our expert chefs, ensuring every bite is bursting with flavor.</p>
+        <p>Whether you're a fan of classic favorites like pepperoni or adventurous flavors like BBQ chicken, we have something for everyone. Join us today and experience the joy of Pizzalicious!</p>
+        <div class="special-offers">
+            <h3>Special Offers</h3>
+            <ul>
+                <li>Buy one pizza, get one free on Mondays!</li>
+                <li>20% off for students with valid ID.</li>
+                <li>Family combo deals available every weekend.</li>
+            </ul>
+        </div>
+        <div class="testimonials">
+            <h3>Customer Testimonials</h3>
+            <div class="testimonial">
+                <p>"Pizzalicious is my go-to place for pizza! Their crust is always perfectly crispy, and the toppings are so fresh. Highly recommended!"</p>
+                <p>- John Doe</p>
+            </div>
+            <div class="testimonial">
+                <p>"I've tried pizzas from many places, but nothing beats the taste of Pizzalicious. Plus, their delivery service is fast and reliable."</p>
+                <p>- Jane Smith</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="map-section">
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.798867858973!2d73.1753207148934!3d22.307159785319013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848914d6e0f7%3A0xa1d7084d300be1ee!2sVadodara%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1647723017782!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="social-media">
+        <a href="#" class="social-media-link" id="twitter-link">
+            <div class="social-media-logo-container">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/1_Twitter3_colored_svg-128.webp" alt="Twitter" class="social-media-logo">
+            </div>
+            <div class="social-media-post-container">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/tweet-image.png" alt="Twitter post" class="social-media-post">
+            </div>
+        </a>
+        <a href="#" class="social-media-link" id="facebook-link">
+            <div class="social-media-logo-container">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/5296499_fb_facebook_facebook logo_icon.svg" alt="Facebook" class="social-media-logo">
+            </div>
+            <div class="social-media-post-container">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/facebook_post.png" alt="Facebook post" class="social-media-post"width: 270;
+                height: 278;>
+            </div>
+        </a>
+        <a href="#" class="social-media-link" id="instagram-link">
+            <div class="social-media-logo-container">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/ig.webp" alt="Instagram" class="social-media-logo">
+            </div>
+            <div class="social-media-post-container">
+                <img src="/media/viru/viru_tandel/Harshil Tandel Prgrams/FRONTEND/DE PROJECT/images/post_image.jpg" alt="Instagram post" class="social-media-post">
+            </div>
+        </a>
+    </div>
+    <p class="copyright">© 2023 Pizzalicious. All rights reserved.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+ </html>

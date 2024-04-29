@@ -1,0 +1,1029 @@
+.header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    /* Use flexbox to align items horizontally */
+    flex-direction: row;
+    /* Arrange items horizontally */
+    justify-content: space-between;
+    /* Ensure items are evenly spaced */
+    align-items: center;
+    /* Center items vertically */
+}
+
+.logo {
+    max-width: 150px;
+    /* Adjust the size as needed */
+}
+
+.navigation {
+    list-style: none;
+    /* Remove default list style */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Use flexbox to align items horizontally */
+    justify-content: center;
+    /* Center navigation horizontally */
+}
+
+.navigation li {
+    margin-right: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    /* Add relative positioning */
+    transition: color 0.3s ease;
+    /* Smooth transition effect */
+}
+
+.navigation a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    /* Adjust the thickness of the line */
+    bottom: 0;
+    left: 0;
+    background-color: #ff5722;
+    /* Color of the underline */
+    transform: scaleX(0);
+    /* Initially invisible */
+    transition: transform 0.3s ease;
+    /* Smooth transition effect */
+}
+
+.navigation a:hover::before {
+    transform: scaleX(1);
+    /* Make the line visible on hover */
+}
+
+/* CSS for Home Section */
+.home-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff7043;
+}
+
+/* CSS for Menu Section */
+.menu-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.slider-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+}
+
+.slider {
+    display: inline-flex;
+}
+
+.slide {
+    position: relative;
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 20px;
+    text-align: left;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.slide:hover {
+    transform: translateY(-5px);
+}
+
+.slide img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.slide h3 {
+    margin: 10px;
+    font-size: 1.2em;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.slide:hover h3 {
+    color: #ff5722;
+}
+
+.slide p,
+.price {
+    margin: 0 10px;
+    font-size: 0.9em;
+    color: transparent;
+    overflow: visible;
+    /* Show full content without truncation */
+    display: -webkit-box;
+    -webkit-line-clamp: unset;
+    /* Remove line clamp */
+    -webkit-box-orient: vertical;
+    transition: color 0.3s ease;
+}
+
+.slide:hover p,
+.slide:hover .price {
+    color: #666;
+}
+
+.add-to-cart {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #ff7043;
+}
+
+.cart-section {
+    display: none;
+    margin-top: 50px;
+}
+
+.cart-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-section th,
+.cart-section td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* .cart-section th {
+    background-color: #f2f2f2;
+} */
+
+.cart-section img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+#total-price {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.payment-section {
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f8f9fa;
+    /* Add background color */
+}
+
+.payment-options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.payment-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.payment-option:hover {
+    transform: translateY(-5px); /* Add slight upward translation on hover */
+}
+
+.payment-option img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.payment-option img:hover {
+    transform: scale(1.2); /* Increase size on hover */
+}
+
+.selected-payment {
+    border: 2px solid #ff5722;
+}
+
+.payment-methods {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    transition: opacity 0.3s ease; /* Add transition for opacity */
+    opacity: 0; /* Initially hidden */
+}
+
+.payment-methods.active {
+    display: block;
+    opacity: 1; /* Show with opacity transition */
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Add transition for opacity */
+}
+
+.payment-method.active {
+    opacity: 1; /* Show with opacity transition */
+}
+
+.payment-icon {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.payment-title {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.payment-description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.crazy-effect {
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.delivery-section {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.delivery-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+.delivery-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#delivery-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#delivery-form label {
+    font-weight: bold;
+}
+
+#delivery-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#delivery-form input:focus {
+    outline: none;
+    border-color: #ff5722;
+    box-shadow: 0px 0px 5px 0px rgba(255, 87, 34, 0.5);
+}
+
+#delivery-form button {
+    padding: 10px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#delivery-form button:hover {
+    background-color: #ff7043;
+}
+
+.footer {
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set text color to white */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .social-media {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Horizontally center the items */
+}
+
+.footer .social-media-link {
+    margin: 0 10px; /* Add some margin between the logos */
+    position: relative; /* Position relative for the container */
+}
+
+.footer .social-media-logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+}
+
+.footer .social-media-post-container {
+    display: none; /* Initially hidden */
+    position: absolute; /* Position absolutely */
+    bottom: calc(100% + 10px); /* Position above the social media link */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    background-color: #fff; /* White background */
+    padding: 10px; /* Add padding */
+    border-radius: 5px; /* Add border radius */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    z-index: 1; /* Ensure it's above other content */
+}
+
+.footer .social-media-link:hover .social-media-post-container {
+    display: block; /* Show on hover */
+}
+/* Dark Theme */
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+.header,
+.menu-section,
+.cart-section,
+.payment-section,
+.delivery-section {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.btn,
+.add-to-cart,
+#confirm-payment,
+#delivery-form button {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+.btn:hover,
+.add-to-cart:hover,
+#confirm-payment:hover,
+#delivery-form button:hover {
+    background-color: #ff7043;
+}
+
+/* Adjust text color for better visibility */
+.content,
+.slide h3,
+.slide p,
+.price,
+#total-price,
+.footer,
+.footer .social-media-link {
+    color: #ddd; /* Light gray text color */
+}
+
+/* Hover effect on navigation links */
+.navigation a:hover {
+    color: #ff5722; /* Orange color on hover */
+}
+/* Dark Theme */
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+.header,
+.menu-section,
+.cart-section,
+.payment-section,
+.delivery-section {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.btn,
+.add-to-cart,
+#confirm-payment,
+#delivery-form button {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+.btn:hover,
+.add-to-cart:hover,
+#confirm-payment:hover,
+#delivery-form button:hover {
+    background-color: #ff7043;
+}
+
+/* Adjust text color for better visibility */
+.content,
+.slide h3,
+.slide p,
+.price,
+#total-price,
+.footer,
+.footer .social-media-link {
+    color: #ddd; /* Light gray text color */
+}
+
+/* Hover effect on navigation links */
+.navigation a:hover {
+    color: #ff5722; /* Orange color on hover */
+}
+
+/* Additional Styles */
+th {
+    color: white; /* Set text color to white */
+    background-color: black; /* Set background color to black */
+    border-color: white; /* Set border color to white */
+}
+/* CSS for Info Section */
+.info-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.info-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.info-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.info-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.special-offers {
+    margin-top: 50px;
+}
+
+.special-offers h3 {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    color: #ff5722;
+}
+
+.special-offers ul {
+    list-style: none;
+    padding: 0;
+}
+
+.special-offers li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.testimonials {
+    margin-top: 50px;
+}
+
+.testimonials h3 {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    color: #ff5722;
+}
+
+.testimonial {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.testimonial p:last-child {
+    font-style: italic;
+    color: #666;
+}
+/* CSS for Info Section */
+.info-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.info-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.info-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+    font-size: 2.5em;
+    padding-bottom: 10px;
+}
+
+/* Add an underline effect */
+.info-section h2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ff5722;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-section h2:hover::after {
+    transform: scaleX(1);
+}
+
+.info-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Add a box shadow to each section */
+.info-section .special-offers,
+.info-section .testimonials {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.special-offers h3,
+.testimonials h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #ff5722;
+    text-align: center;
+    position: relative;
+}
+
+/* Add a rotating underline effect to h3 headings */
+.special-offers h3::after,
+.testimonials h3::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ff5722;
+    bottom: -10px;
+    left: 0;
+    transform-origin: bottom;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.special-offers h3:hover::after,
+.testimonials h3:hover::after {
+    transform: scaleX(1);
+}
+
+.special-offers ul,
+.testimonials ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.special-offers li,
+.testimonials li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Add a bullet point with gradient color */
+.special-offers li::before,
+.testimonials li::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: radial-gradient(#ff5722, transparent);
+}
+
+.testimonial {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.testimonial p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.testimonial p:last-child {
+    font-style: italic;
+    color: #666;
+}
+
+/* Add a glowing effect to testimonials */
+.testimonial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ff5722;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.testimonial:hover::before {
+    opacity: 1;
+}
+/* Dark Theme Styles */
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+.info-section {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.info-section h2::after,
+.special-offers h3::after,
+.testimonials h3::after {
+    background-color: #ff5722;
+}
+
+.special-offers,
+.testimonials,
+.testimonial {
+    background-color: #2a2a2a;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.special-offers h3,
+.testimonials h3 {
+    color: #ff5722;
+}
+
+.special-offers li::before,
+.testimonials li::before {
+    background: radial-gradient(#ff5722, transparent);
+}
+
+.testimonial::before {
+    box-shadow: 0 0 20px #ff5722;
+}
+/* Info Section Styles */
+.info-section {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.info-section h2 {
+    color: #fff; /* Set heading color to white */
+}
+
+.info-section p {
+    color: #ccc; /* Set content color to light gray */
+    max-width: 800px;
+    margin: 0 auto;
+}
+.map-container {
+    position: relative;
+    overflow: hidden;
+    width: 600px; /* Adjust width as needed */
+    height: 450px; /* Adjust height as needed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    transition: transform 0.5s ease; /* Add transition effect for smooth scaling */
+}
+
+.map-container:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    /* Styles for tablets and smaller */
+}
+
+@media (max-width: 480px) {
+    /* Styles for mobile devices */
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+h1 {
+    font-size: 2em;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+}
+/* Special Offers Styles */
+.special-offers {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Same as testimonials */
+}
+
+.special-offers h3 {
+    font-size: 1.5em;
+    color: #ff5722; /* Match with testimonials */
+    text-align: center;
+}
+
+.special-offers ul {
+    list-style: none;
+    padding: 0;
+}
+
+.special-offers li {
+    font-size: 1.1em;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Custom bullet points with a gradient effect */
+.special-offers li::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: radial-gradient(#ff5722, transparent); /* Same style as testimonials */
+}
+.container {
+    display: flex;
+    flex-direction: column; /* Vertical stacking */
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column; /* Align navigation vertically */
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column; /* Mobile layout: stack vertically */
+    }
+}
+.section {
+    float: none; /* Prevent horizontal stacking */
+    display: block; /* Ensure full-width stacking */
+}
+
+.cart-section,
+.payment-section,
+.delivery-section,
+.menu-section {
+    width: 100%; /* Full width to ensure vertical stacking */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding doesn't affect layout */
+}
+.header {
+    background-color: #333; /* Visible background color */
+    padding: 15px; /* Padding for spacing */
+    /* position: sticky; Keeps navbar at the top during scrolling */
+    top: 0; /* Stick to the top */
+    z-index: 100; /* Priority over other elements */
+}
+
+.navigation {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
+    display: flex; /* Flexbox for horizontal layout */
+    flex-direction: row; /* Horizontal arrangement */
+    justify-content: space-around; /* Even space between items */
+}
+
+.navigation li {
+    margin-right: 15px; /* Spacing between items */
+}
+
+.navigation a {
+    text-decoration: none; /* No underline */
+    color: white; /* Visible text color */
+    padding: 10px 15px; /* Padding for clickable area */
+    transition: background-color 0.3s ease; /* Hover effect */
+}
+
+.navigation a:hover {
+    background-color: #555; /* Darker background on hover */
+}
+.special-offers {
+    padding: 20px; /* Add padding for consistency */
+    background-color: #fff; /* White background for uniformity */
+    border-radius: 10px; /* Rounded corners to match testimonials */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+.special-offers h3 {
+    font-size: 1.5em; /* Large font for headings */
+    color: #ff5722; /* Orange text color for consistency */
+    text-align: center; /* Center-align the heading */
+}
+
+.special-offers ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* No additional padding */
+}
+
+.special-offers li {
+    font-size: 1.1em; /* Consistent font size */
+    color: #666; /* Gray color for text consistency */
+    padding: 10px; /* Padding for spacing */
+    border-bottom: 1px solid #ddd; /* Separator between items */
+    position: relative; /* To ensure proper placement of bullet points */
+}
+
+.special-offers li::before {
+    content: ''; /* Custom bullet points */
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%; /* Rounded bullet points */
+    background: radial-gradient(#ff5722, transparent); /* Orange gradient */
+}
+.special-offers {
+    padding: 20px; /* Padding for spacing */
+    background-color: #2a2a2a; /* White background for consistency */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow effect to match testimonials */
+}
+
+.special-offers h3 {
+    font-size: 1.5em; /* Large font size for headings */
+    color: #ff5722; /* Matching orange color */
+    text-align: center; /* Center-align text */
+}
+
+.special-offers ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* No additional padding */
+}
+
+.special-offers li {
+    font-size: 1.1em; /* Consistent font size with testimonials */
+    color: #666; /* Gray text color */
+    padding: 10px; /* Padding for spacing */
+    border-bottom: 1px solid #ddd; /* Optional: Separator between items */
+    position: relative; /* Ensure proper placement for other elements */
+}
