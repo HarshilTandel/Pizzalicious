@@ -29,7 +29,7 @@ Follow these steps to set up Pizzlacious locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pizzlacious.git
+   git clone https://github.com/HarshilTandel/pizzlacious.git
    cd pizzlacious
 
 2.Install dependencies:
