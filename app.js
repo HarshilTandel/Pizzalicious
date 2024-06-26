@@ -44,16 +44,17 @@ function updateTotalPrice() {
 // Helper function to get image URL based on pizza name
 function getImageUrl(name) {
     const imageMap = {
-        "Neapolitan Pizza": "/home/viru/Downloads/Neapolitan Pizza.jpg",
-        "Chicago Style Pizza": "/home/viru/Downloads/Chicago Style Pizza.jpg",
-        "Supreme Pizza": "/home/viru/Downloads/Supreme Pizza.webp",
-        "Hawaiian Pizza": "/home/viru/Downloads/Hawaiian Pizza.webp",
-        "BBQ Chicken Pizza": "/home/viru/Downloads/BBQ Chicken Pizza.webp",
-        "Meat Pizza": "/home/viru/Downloads/Meat Pizza.webp",
-        "Veggie Pizza": "/home/viru/Downloads/Veggie Pizza.webp",
-        "Buffalo Pizza": "/home/viru/Downloads/Buffalo Pizza.webp",
-        "Pepperoni Pizza": "/home/viru/Downloads/Pepperoni Pizza.jpeg",
-        "Margherita Pizza": "/home/viru/Downloads/Margherita Pizza.jpeg"
+        "Neapolitan Pizza": "https://i.postimg.cc/d3QcbMq5/Neapolitan-Pizza.jpg",
+        "Chicago Style Pizza": "https://i.postimg.cc/HxDpPPcN/Chicago-Style-Pizza.jpg",
+        "Supreme Pizza": "https://i.postimg.cc/TYwXQXNw/Supreme-Pizza.webp",
+        "Hawaiian Pizza": "https://i.postimg.cc/dVgvLSB0/Hawaiian-Pizza.webp",
+        "BBQ Chicken Pizza": "https://i.postimg.cc/k5tJsd48/BBQ-Chicken-Pizza.webp",
+        "Meat Pizza": "https://i.postimg.cc/fLfhqWh3/Meat-Pizza.webp",
+        "Veggie Pizza": "https://i.postimg.cc/mrQxhZkd/Veggie-Pizza.webp",
+        "Buffalo Pizza": "https://i.postimg.cc/xCv0ryL1/Buffalo-Pizza.webp
+",
+        "Pepperoni Pizza": "https://i.postimg.cc/8cygDycN/Pepperoni-Pizza.jpg",
+        "Margherita Pizza": "https://i.postimg.cc/htXc4qVw/Margherita-Pizza.jpg"
     };
     return imageMap[name];
 }
